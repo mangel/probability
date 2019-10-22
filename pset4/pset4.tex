@@ -96,9 +96,9 @@ $$85000*2.28\% = 1938$$
 		\hline
 		Ciudad A & 880 & 1200 & 160 & -2 & 0.228 & 85000 & 1938 \\
 		\hline
-		Ciudad B & 900 & 1400 & 200 & -3 & 0.0013 & 120000 & 156 \\
+		Ciudad B & 900 & 1400 & 200 & -2.5 & 0.0062 & 120000 & 744 \\
 		\hline
-		Ciudad C & 940 & 1600 & 300 & -3 & 0.0013 & 160000 & 208 \\
+		Ciudad C & 940 & 1600 & 300 & -2.2 & 0.0139  & 160000 & 2224 \\
 		\hline
 	\end{tabular}
 \end{center}
@@ -108,7 +108,7 @@ $$85000*2.28\% = 1938$$
 \paragraph{Para A.} en la tabla 2, encontramos el valor límite al que un habitante de la ciudad A debe pagar impuestos.
 $$Z = \frac{1600 - 1200}{160} =  2.5$$
 
-Por ende $P(\text{salario} \geq 1600) \approx 0.0062 = 0.62\%$ y la cantidad de  población será el producto de esta probabilidad por el número de habitantes de la ciudad A, es decir: 
+Sin embargo, para este caso necesitamos los valores mayores a nuestra restricción, por ende tomamos el valor inverso de Z, es decir $Z = -2.5$. Por ende $P(\text{salario} \geq 1600) \approx 0.0062 = 0.62\%$ y la cantidad de  población será el producto de esta probabilidad por el número de habitantes de la ciudad A, es decir: 
 
 $$85000*0.62\% = 527$$
 
@@ -122,11 +122,11 @@ $$85000*0.62\% = 527$$
 		\hline
 		\textbf{Ciudad} & \textbf{Restricción Ingresos} & \textbf{$\mu$} & \textbf{$\sigma$} & \textbf{Z} & \textbf{$P(X)$} & \textbf{Población} & \textbf{Contribuyentes}\\
 		\hline
-		Ciudad A & 1600 & 1200 & 160 & 2.5 & 0.0062 & 85000 & 527 \\
+		Ciudad A & 1600 & 1200 & 160 & -2.5 & 0.0062 & 85000 & 527 \\
 		\hline
-		Ciudad B & 1920 & 1400 & 200 & 2.6 & 0.0047 & 120000 & 564 \\
+		Ciudad B & 1920 & 1400 & 200 & -2.6 & 0.0047 & 120000 & 564 \\
 		\hline
-		Ciudad C & 2200 & 1600 & 300 & 2 & 0.0228 & 160000 & 3648 \\
+		Ciudad C & 2200 & 1600 & 300 & -2 & 0.0228 & 160000 & 3648 \\
 		\hline
 	\end{tabular}
 \end{center}
@@ -158,32 +158,85 @@ Aplicando la fórmula, obtenemos:
 		\hline
 		Ciudad A & 25 & 15 & 527 & 1938 & 29070 & 13175 & NO \\
 		\hline
-		Ciudad B & 23 & 18 & 564 & 156 & 2808 & 12972 & SI \\
+		Ciudad B & 23 & 18 & 564 & 744 & 13392 & 12972 & NO \\
 		\hline
-		Ciudad C & 12 & 16 & 3648 & 208 & 3328 & 43779 & SI \\
+		Ciudad C & 12 & 16 & 3648 & 2224 & 35584 & 43776 & SI \\
 		\hline
 	\end{tabular}
 \end{center}
 
-Por lo tanto, únicamente en las ciudades B y C se puede evidenciar que se puede sufragar el subsidio con lo recogido en impuestos.
+Por lo tanto, únicamente en la ciudad C se puede sufragar el subsidio con lo recogido en impuestos.
 
 \paragraph{Solución 4} En este caso debemos realizar dos sumas, la suma del total de subsidios y la suma del total recolectado en impuestos, respectivamente:
 
-$$T_S = 35206$$
-$$T_I = 69926$$
+$$T_S = 78046$$
+$$T_I = 69923$$
 
 Al realizar la diferencia entre los impuestos y lo que seentregaría en subsidios encontramos que:
 
-$$R = T_I - T_S = 69926 - 35206 = 34720$$
+$$R = T_I - T_S = 69923 - 78046 = -8123$$
 
-Por lo tanto, si se decide sufragar de los impuestos los subisidios, el gobierno se encontrará en superávit por un monto de $34720$ miles de pesos.
+Por lo tanto, si se decide sufragar de los impuestos los subisidios, el gobierno se encontrará en déficit por un monto de $-8123$ miles de pesos.
 
-\paragraph{Solución 5.} En este caso, debido a que en escencia realizamos productos sucesivos, y dado que se debe preservar las constantes de proporción de $12\%$ y $15\%$ para la población que recibiría subsidios y para la población que debería pagar impuestos respectivamente. y por ende únicamente es necesario multiplicar las dos constantes con los totales de subsidios e impuestos encontrados en el punto anterior. Finalmente incorporar estos valores en la ecuación que nos arroja el resultado:
+\paragraph{Solución 5.} En este caso, debido a que en escencia realizamos productos sucesivos, y dado que se deben preservar las constantes de proporción de $15\%$ y $12\%$ para la población que recibiría subsidios y para la población que debería pagar impuestos respectivamente. Únicamente es necesario multiplicar las dos constantes con los totales de subsidios e impuestos encontrados en el punto anterior. Finalmente incorporar estos valores en la ecuación que nos arroja el resultado:
 
 \begin{align*}
-	R' = T_{I} * 15\%  - T_{S} * 12\% &= 69926*15\% - 35206 * 12\%\\
-	&\approx 6264.18 
+	R' = T_{I} * 12\%  - T_{S} * 15\% &= 69923*12\% - 78046 * 15\%\\
+	&\approx -3316.14 
 \end{align*}
 
-Por ende, aún aplicando estas constantes se obtiene que el gobierno continúa en superávit por aproximadamente $6264.18$ miles de pesos.
+Por ende, aún aplicando estas constantes se obtiene que el gobierno continúa en déficit por aproximadamente $-3316.14$ miles de pesos.
+
+\paragraph{Solución 6.} Para encontrar los valores de cada ciudad, debemos realizar el proceso inverso.
+
+\paragraph{Para el caso de A} Por el ejercicio anterior, podemos establecer que el número de personas que podrían acceder al subsidio serían del 15\% de las que podían establecer en primera instancia, es decir:
+
+$$1938*15\% = 290.7 $$
+
+es decir casi 291 personas. Con este valor sustituimos en la ecuación con la que se estableció que para la ciudad A únicamente 1938 habitantes podrían acceder al subsidio, pero con el valor de probabilidad como incógnita:
+
+$$P_{SA} = 85000 * P(X) = 290.7$$
+
+Por ende,
+
+$$P(X) = \frac{291}{85000} \approx 0.0034$$
+
+Ahora buscamos su correspondiente valor Z, y encontramos que es $Z = -2.71$. Al reemplazar en el valor de la ecuación que determina Z obtenemos:
+
+$$Z=-2.71 = \frac{x-1200}{160} \implies x = (-2.71*160) + 1200$$
+
+$$ x = 766.4$$
+
+Tal como se esperaba, al reducir el número de personas que pueden acceder al subsidio, encontramos que la barrera de acceso al beneficio es se incrementa decir, al pasar del 880 a 766.4, para la población de esta ciudad se deben poseer menos ingresos para acceder al beneficio. Otra manera de verlo sería que el 85\% de la población que inicialmente podía acceder al beneficio, ya no podría.
+
+\paragraph{} Para los impuestos realizaremos el mismo proceso.
+
+$$P_{IA} = 527 * 12\% = 63.24 \implies P(X) = \frac{63.24}{85000} \approx 0.0007 $$
+
+Hallamos el valor de Z, y encontramos que es $Z = -3.02$, sin embargo, dada la restricción de pago de impuesto requiere que el salario sea mayor a cierto monto, debemos obtener el valor opuesto de Z, es decir $Z = 3.02$. Ahora reemplazando como en el ejercicio anterior tenemos:
+
+$$Z = 3.02 = \frac{x-1200}{160} \implies x = (3.02*160) + 1200$$
+
+$$x = 1683.2$$
+
+Y como se esperaba, al disminuir el número de personas que pagarían impuestos, la barrera para el pago de impuestos también aumenta. Y siguiendo la misma interpretación del ejemplo del beneficio de subsidios, el 88\% de las personas que originalmente pagarían impuestos ya no deberían realizar el pago de impuestos.
+
+\paragraph{} de manera análoga realizamos el mismo procedimiento con las demás ciudades y obtenemos la siguiente tabla
+
+\begin{center}
+	\begin{tabular}{ | l | c | c | }
+		\hline
+		\space & \textbf{Subsidio} & \textbf{Impuesto} \\
+		\hline
+		\textbf{Ciudad} & Ingresos menores a & Ingresos mayores a \\
+		\hline
+		Ciudad A & 766.4 & 1683.2 \\
+		\hline
+		Ciudad B & 798 & 2006 \\
+		\hline
+		Ciudad C & 736 & 2434 \\
+		\hline
+	\end{tabular}
+\end{center}
+
 \end{document}
